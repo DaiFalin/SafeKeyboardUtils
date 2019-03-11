@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f1f1f1" />
+
+    <RelativeLayout
+        android:id="@+id/keyboardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/keyboard_tip_height"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/keyboardTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/safe_keyboard"
+            android:textColor="#CC000000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/keyboardDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="完成"
+            android:textColor="#CC000000"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/keyboardLayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <com.dfl.library.SafeKeyboardView
+            android:id="@+id/safeKeyboardLetter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="#f1f1f1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/keyboard_press_bg"
+            android:keyPreviewHeight="60dp"
+            android:keyPreviewLayout="@layout/keyboard_preview_layout"
+            android:keyPreviewOffset="0dp"
+            android:keyTextColor="#CC000000"
+            android:keyTextSize="20dp"
+            android:shadowRadius="0.0" />
+
+    </FrameLayout>
+</LinearLayout>
